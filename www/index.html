@@ -24,6 +24,19 @@
     <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon-152.png">
     <link rel="icon" sizes="196x196" href="assets/img/favicon-196.png">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.5/typeahead.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+    <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.js"></script>
+    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js"></script>
+    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.4.0/turf.min.js"></script>
+    <script src="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.js"></script>
+    <script src="assets/js/app.js"></script>
   </head>
 
   <body>
@@ -38,7 +51,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="https://github.com/zorostang/chicago_bike_equity" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;GitHub</a></li>
+            <li class="hidden"><a href="https://github.com/zorostang/chicago_bike_equity" data-ttoggle="collapse" data-ttarget=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;GitHub</a></li>
+            <li><a href="https://github.com/zorostang/chicago_bike_equity" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;GitHub</a></li>
             <li class="dropdown">
               <a id="toolsDrop" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe white"></i>&nbsp;&nbsp;Tools <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -52,6 +66,7 @@
                 <a class="dropdown-toggle" id="downloadDrop" href="#" role="button" data-toggle="dropdown"><i class="fa fa-cloud-download white"></i>&nbsp;&nbsp;Download <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="data/chicago_wards_2015.geojson" download="chicago_wards_2015.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Wards</a></li>
+                  <li><a href="data/divvy_stations.geojson" download="divvy_stations.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Divvy Stations</a></li>
                   <li><a href="data/bike_routes_12-19-14_excl_recommended.geojson" download="bike_routes_12-19-14_excl_recommended.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Bike Lanes</a></li>
                   <li><a href="data/grocery_stores_2013.geojson" download="grocery_stores_2013.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Grocery Stores</a></li>
                   <li><a href="data/DOITT_MUSEUM_01_13SEPT2010.geojson" download="museums.geojson" target="_blank" data-toggle="collapse" data-target=".navbar-collapse.in"><i class="fa fa-download"></i>&nbsp;&nbsp;Museums</a></li>
@@ -286,16 +301,6 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.5/typeahead.bundle.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
-    <script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
-    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.js"></script>
-    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js"></script>
-    <script src="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.js"></script>
-    <script src="assets/js/app.js"></script>
+
   </body>
 </html>
